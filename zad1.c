@@ -37,6 +37,17 @@ int main() {
 		"add eax,%1;"	
 		"add eax,eax;"	
 		"add eax,eax;"							
+		"mov %0,eax;" 
+		 
+		ALBO
+		 
+		"mov eax, %1;"
+		"add eax,eax;"
+		"add eax,eax;"		
+		"mov ebx,eax;"	
+		"add eax,eax;"	
+		"add eax,eax;"
+		"add eax,ebx;"							
 		"mov %0,eax;"
-		* */
+		*/
 }
