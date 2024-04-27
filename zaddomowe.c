@@ -10,14 +10,14 @@ int main() {
 		"xor ebx,ebx;"
 	"petla:"	
 		"shl eax;"
-		"jnc skok1;" //jesli nie ma jedynki
+		"jnc skok;" //jesli nie ma jedynki
 		"inc ebx;"
 		"cmp ebx,ecx;"
-		"jbe skok;" //jesli nie ma dluzszego ciagu
-		"mov ecx,ebx;"	
+		"ja skok1;" 
 	"skok1:"
-		"mov ebx,0;"	
+		"mov ecx,ebx;"	
 	"skok:"
+		"mov ebx,0;"	
 		"and eax,eax;"
 		"jnz petla;" //jesli liczba wejsciowa jest rozna od 0
 		"mov %0, ecx;"
