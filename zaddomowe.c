@@ -3,24 +3,23 @@
 int main() {
 	int x = 0x0F0FF0F0;
 	int y = 0;
-	//y = x +x; -  tworzymy to w assemblerze
 	asm (
 		"mov eax, %1;"
 		"xor ecx,ecx;"
 		"xor ebx,ebx;"
 	"petla:"	
 		"shl eax;"
-		"jnc skok;" //jesli nie ma jedynki
-		"inc ebx;"
+		"jnc skok;" 
+		"inc ebx;" //dodajemy do obecnego ciagu
 		"cmp ebx,ecx;"
-		"ja skok1;" 
+		"ja skok1;" //jesli obecna liczba jest wieksza niz maksymalna
 	"skok1:"
-		"mov ecx,ebx;"	
+		"mov ecx,ebx;"	//to zamien maksymalna na obecna
 		"jnz petla;"
-	"skok:"
-		"mov ebx,0;"	
+	"skok0:"
+		"mov ebx,0;" //obecny ciag zmieniamy na 0	
 		"and eax,eax;"
-		"jnz petla;" //jesli liczba wejsciowa jest rozna od 0
+		"jnz petla;" 
 		"mov %0, ecx;"
 		:"=r"(y) 
 		:"r"(x) 
