@@ -16,6 +16,7 @@ int main() {
 		"ja skok1;" 
 	"skok1:"
 		"mov ecx,ebx;"	
+		"jnz petla;"
 	"skok:"
 		"mov ebx,0;"	
 		"and eax,eax;"
