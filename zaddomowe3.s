@@ -39,3 +39,5 @@ msg:
 
 #f(n) = 1 dla n=1 i n=2
 #f(n-1)+f(n-2) dla n>2
+#
+#musimy wykorzystac stos w jakis sprytny sposob
